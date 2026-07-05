@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #050505;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.police-light {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.police-light::before,
+.police-light::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  filter: blur(130px);
+  opacity: 0.18;
+}
+
+.police-light::before {
+  left: -15%;
+  background: #ff3c00;
+  animation: redFlash 2s infinite;
+}
+
+.police-light::after {
+  right: -15%;
+  background: #0088ff;
+  animation: blueFlash 2s infinite;
+}
+
+@keyframes redFlash {
+  0%, 100% { opacity: .35; }
+  25% { opacity: .9; }
+  50% { opacity: .08; }
+  75% { opacity: .5; }
+}
+
+@keyframes blueFlash {
+  0%, 100% { opacity: .08; }
+  25% { opacity: .4; }
+  50% { opacity: .95; }
+  75% { opacity: .2; }
+}
+
+.card {
+  width: 90%;
+  max-width: 760px;
+  background: rgba(12, 12, 12, 0.88);
+  border: 1px solid rgba(255, 75, 15, 0.8);
+  border-radius: 26px;
+  padding: 45px 35px;
+  text-align: center;
+  box-shadow:
+    0 0 70px rgba(255, 50, 0, 0.25),
+    inset 0 0 35px rgba(255, 90, 0, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  width: 135px;
+  display: block;
+  margin: 0 auto 18px auto;
+  filter: drop-shadow(0 0 25px rgba(255, 80, 0, 0.65));
+}
+
+.badge {
+  display: inline-block;
+  color: #ff5a1f;
+  border: 1px solid rgba(255, 90, 31, 0.7);
+  background: rgba(255, 90, 31, 0.08);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  margin: 0 0 18px 0;
+  font-size: 42px;
+  text-transform: uppercase;
+}
+
+.orange {
+  color: #ff5a1f;
+}
+
+p, li {
+  color: #e8e8e8;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+ul {
+  text-align: left;
+  max-width: 520px;
+  margin: 20px auto;
+}
+
+.lines {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ff5a1f, transparent);
+  margin: 28px 0;
+}
+
+.links a {
+  color: #ff5a1f;
+  text-decoration: none;
+  margin: 0 10px;
+}
