@@ -1,41 +1,972 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Terms of Service</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Terms of Service for the San Francisco Roleplay Roblox verification application."
+  >
+
+  <title>
+    Terms of Service | San Francisco Roleplay
+  </title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 40px 18px;
+      background:
+        radial-gradient(
+          circle at top left,
+          rgba(255, 69, 0, 0.13),
+          transparent 34%
+        ),
+        radial-gradient(
+          circle at bottom right,
+          rgba(0, 119, 255, 0.11),
+          transparent 34%
+        ),
+        #050505;
+      color: #ffffff;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+      overflow-x: hidden;
+    }
+
+    .police-lights {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .police-lights::before,
+    .police-lights::after {
+      content: "";
+      position: absolute;
+      top: -20%;
+      width: 55%;
+      height: 140%;
+      filter: blur(135px);
+    }
+
+    .police-lights::before {
+      left: -22%;
+      background: #ff3c00;
+      animation: redFlash 2.4s infinite;
+    }
+
+    .police-lights::after {
+      right: -22%;
+      background: #0077ff;
+      animation: blueFlash 2.4s infinite;
+    }
+
+    @keyframes redFlash {
+      0%,
+      100% {
+        opacity: 0.12;
+        transform: translateX(-35px);
+      }
+
+      35% {
+        opacity: 0.62;
+        transform: translateX(55px);
+      }
+
+      70% {
+        opacity: 0.06;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes blueFlash {
+      0%,
+      100% {
+        opacity: 0.06;
+        transform: translateX(35px);
+      }
+
+      45% {
+        opacity: 0.58;
+        transform: translateX(-55px);
+      }
+
+      80% {
+        opacity: 0.14;
+        transform: translateX(0);
+      }
+    }
+
+    .page {
+      width: 100%;
+      max-width: 920px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
+      background: rgba(12, 12, 12, 0.94);
+      border: 1px solid rgba(255, 90, 31, 0.7);
+      border-radius: 28px;
+      padding: 46px 42px;
+      box-shadow:
+        0 0 70px rgba(255, 69, 0, 0.2),
+        inset 0 0 45px rgba(255, 90, 31, 0.035);
+      backdrop-filter: blur(15px);
+      animation: cardEnter 0.65s ease;
+    }
+
+    @keyframes cardEnter {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.985);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .header {
+      text-align: center;
+    }
+
+    .logo {
+      width: 126px;
+      max-width: 45%;
+      display: block;
+      margin: 0 auto 18px;
+      filter:
+        drop-shadow(
+          0 0 24px rgba(255, 90, 31, 0.6)
+        );
+    }
+
+    .brand-badge {
+      display: inline-block;
+      margin-bottom: 22px;
+      padding: 8px 17px;
+      border: 1px solid rgba(255, 90, 31, 0.65);
+      border-radius: 999px;
+      background: rgba(255, 90, 31, 0.08);
+      color: #ff6a2b;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 7vw, 48px);
+      line-height: 1.08;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .orange {
+      color: #ff5a1f;
+      text-shadow:
+        0 0 22px rgba(255, 90, 31, 0.42);
+    }
+
+    .subtitle {
+      max-width: 700px;
+      margin: 18px auto 0;
+      color: #c9c9c9;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .effective-date {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.055);
+      color: #aeb0b5;
+      font-size: 13px;
+    }
+
+    .divider {
+      height: 1px;
+      margin: 32px 0;
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 90, 31, 0.85),
+          transparent
+        );
+    }
+
+    .notice {
+      margin-bottom: 30px;
+      padding: 17px 19px;
+      border: 1px solid rgba(255, 90, 31, 0.3);
+      border-left: 4px solid #ff5a1f;
+      border-radius: 13px;
+      background: rgba(255, 90, 31, 0.055);
+      color: #dedede;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .section {
+      margin: 0 0 30px;
+      padding: 0 2px;
+    }
+
+    .section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: #ff6a2b;
+      font-size: 21px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 9px 0;
+      color: #d1d1d1;
+      font-size: 15.5px;
+      line-height: 1.72;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 9px 0;
+      color: #d1d1d1;
+      font-size: 15.5px;
+      line-height: 1.62;
+    }
+
+    strong {
+      color: #f3f3f3;
+    }
+
+    code {
+      padding: 2px 7px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #ff8958;
+      font-family:
+        Consolas,
+        Monaco,
+        monospace;
+    }
+
+    .text-link {
+      color: #ff7037;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 11px;
+      margin-top: 30px;
+    }
+
+    .navigation a,
+    .navigation button {
+      min-height: 42px;
+      padding: 11px 17px;
+      border: 1px solid rgba(255, 90, 31, 0.55);
+      border-radius: 999px;
+      background: rgba(255, 90, 31, 0.075);
+      color: #ff6a2b;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .navigation a:hover,
+    .navigation button:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 90, 31, 0.16);
+      box-shadow:
+        0 0 20px rgba(255, 90, 31, 0.23);
+    }
+
+    .navigation .verify {
+      border-color: rgba(255, 90, 31, 0.85);
+      background: #ff4f17;
+      color: #ffffff;
+    }
+
+    .navigation .verify:hover {
+      background: #ff652e;
+    }
+
+    .footer {
+      margin-top: 27px;
+      color: #81848a;
+      font-size: 12.5px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      body {
+        padding: 22px 12px;
+      }
+
+      .card {
+        padding: 34px 22px;
+        border-radius: 22px;
+      }
+
+      h2 {
+        font-size: 19px;
+      }
+
+      p,
+      li {
+        font-size: 15px;
+      }
+
+      .navigation {
+        flex-direction: column;
+      }
+
+      .navigation a,
+      .navigation button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="police-lights"></div>
 
-<div class="police-light"></div>
+  <main class="page">
+    <article class="card">
+      <header class="header">
+        <img
+          class="logo"
+          src="https://i.postimg.cc/tgbbG5mR/content-removebg-preview.png"
+          alt="San Francisco Roleplay logo"
+        >
 
-<div class="card">
-  <img class="logo" src="https://i.postimg.cc/tgbbG5mR/content-removebg-preview.png">
+        <div class="brand-badge">
+          Verification for SFRP
+        </div>
 
-  <div class="badge">San Francisco Roleplay</div>
+        <h1>
+          Terms of
+          <span class="orange">Service</span>
+        </h1>
 
-  <div class="lines"></div>
+        <p class="subtitle">
+          These Terms of Service govern your use of the
+          San Francisco Roleplay Roblox account verification
+          application and related services.
+        </p>
 
-  <h1>Terms of <span class="orange">Service</span></h1>
+        <div class="effective-date">
+          Effective date: July 8, 2026
+        </div>
+      </header>
 
-  <p>By using Verification for SFRP you agree to the following:</p>
+      <div class="divider"></div>
 
-  <ul>
-    <li>You will only verify Roblox accounts that belong to you.</li>
-    <li>You will not attempt to impersonate another user.</li>
-    <li>False verification attempts may result in punishment within the Discord server.</li>
-    <li>Server staff may revoke verification when necessary.</li>
-  </ul>
+      <div class="notice">
+        <strong>Important:</strong>
+        San Francisco Roleplay is an independent,
+        community-operated roleplay server. This application
+        is not owned, operated, sponsored, approved, or
+        endorsed by Roblox Corporation.
+      </div>
 
-  <p>These terms may be updated at any time.</p>
+      <section class="section">
+        <h2>1. Acceptance of These Terms</h2>
 
-  <div class="lines"></div>
+        <p>
+          By opening the application, selecting
+          <strong>Verify with Roblox</strong>, authorizing the
+          requested permissions, or otherwise using the
+          verification service, you agree to these Terms of
+          Service and our Privacy Policy.
+        </p>
 
-  <div class="links">
-    <a href="index.html">Home</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </div>
-</div>
+        <p>
+          If you do not agree to these terms, do not authorize
+          or use the verification service. You may contact the
+          San Francisco Roleplay management team to ask whether
+          another verification method is available.
+        </p>
+      </section>
 
+      <section class="section">
+        <h2>2. About the Service</h2>
+
+        <p>
+          The application is called
+          <strong>Verification for SFRP</strong> and is operated
+          by the San Francisco Roleplay development and
+          ownership team.
+        </p>
+
+        <p>
+          The service is used to connect a Roblox account to a
+          Discord member inside the San Francisco Roleplay
+          community. After successful verification, the service
+          may:
+        </p>
+
+        <ul>
+          <li>
+            Confirm the Roblox account connected to the user.
+          </li>
+
+          <li>
+            Record the Roblox user ID, username, and verification
+            date.
+          </li>
+
+          <li>
+            Remove an unverified Discord role.
+          </li>
+
+          <li>
+            Assign the appropriate verified Discord roles.
+          </li>
+
+          <li>
+            Update the member's Discord nickname to match their
+            Roblox username when the bot has permission to do so.
+          </li>
+
+          <li>
+            Help prevent duplicate or conflicting account
+            verification.
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>3. Roblox OAuth Authorization</h2>
+
+        <p>
+          Verification is completed through Roblox's official
+          OAuth authorization system. The application requests
+          only the following OAuth scopes:
+        </p>
+
+        <ul>
+          <li>
+            <code>openid</code> — used to identify the authorized
+            Roblox account.
+          </li>
+
+          <li>
+            <code>profile</code> — used to obtain basic Roblox
+            profile information needed for verification.
+          </li>
+        </ul>
+
+        <p>
+          Depending on the information Roblox makes available,
+          this may include your Roblox user ID, username, display
+          name, and public profile information. The service may
+          also retrieve your public Roblox avatar or headshot
+          through Roblox's public thumbnail service.
+        </p>
+
+        <p>
+          We do not request access to create, edit, purchase,
+          sell, trade, or manage Roblox items, Robux, groups,
+          experiences, messages, friends, or account security
+          settings.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>4. Password and Account Security</h2>
+
+        <p>
+          The application will never ask you to provide your
+          Roblox password, browser cookies, backup codes,
+          two-factor authentication codes, session tokens, or
+          API keys.
+        </p>
+
+        <p>
+          Roblox login and authorization take place through an
+          official Roblox domain. You are responsible for
+          checking the address shown in your browser before
+          signing in or authorizing the application.
+        </p>
+
+        <p>
+          Never send passwords, cookies, authentication codes,
+          or other private account credentials to San Francisco
+          Roleplay staff members.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>5. Eligibility and Authority</h2>
+
+        <p>
+          You may only verify a Roblox account that you own or
+          are legally authorized to use. You may not verify
+          another person's account without their clear
+          permission.
+        </p>
+
+        <p>
+          You must follow any age, parental consent, account, or
+          regional requirements that apply under Roblox's terms,
+          Discord's terms, and applicable law.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>6. User Responsibilities</h2>
+
+        <p>
+          When using the verification service, you agree to:
+        </p>
+
+        <ul>
+          <li>
+            Provide accurate information.
+          </li>
+
+          <li>
+            Use only an account you are authorized to access.
+          </li>
+
+          <li>
+            Keep your Roblox and Discord accounts secure.
+          </li>
+
+          <li>
+            Follow the San Francisco Roleplay server rules.
+          </li>
+
+          <li>
+            Follow Roblox's Terms of Use and Community Standards.
+          </li>
+
+          <li>
+            Follow Discord's Terms of Service and Community
+            Guidelines.
+          </li>
+
+          <li>
+            Contact management if your linked Roblox or Discord
+            account changes.
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>7. Prohibited Conduct</h2>
+
+        <p>
+          You may not use or attempt to use the service to:
+        </p>
+
+        <ul>
+          <li>
+            Impersonate another person.
+          </li>
+
+          <li>
+            Verify a stolen, shared, purchased, or unauthorized
+            account.
+          </li>
+
+          <li>
+            Bypass a ban, verification restriction, moderation
+            action, or account limitation.
+          </li>
+
+          <li>
+            Submit false, misleading, or fraudulent information.
+          </li>
+
+          <li>
+            Exploit, reverse engineer, overload, disrupt, or
+            interfere with the application.
+          </li>
+
+          <li>
+            Access data or systems without authorization.
+          </li>
+
+          <li>
+            Use automated requests, scripts, or bots to abuse the
+            verification process.
+          </li>
+
+          <li>
+            Attempt to obtain another user's password, cookies,
+            authentication codes, or private information.
+          </li>
+
+          <li>
+            Use the service for unlawful, harmful, deceptive, or
+            abusive activity.
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>8. Verification Decisions</h2>
+
+        <p>
+          Successful OAuth authorization normally results in
+          automated verification. However, verification may be
+          delayed, denied, removed, or reviewed manually when:
+        </p>
+
+        <ul>
+          <li>
+            The supplied information cannot be confirmed.
+          </li>
+
+          <li>
+            The Discord member cannot be found.
+          </li>
+
+          <li>
+            The account appears to be connected to another user.
+          </li>
+
+          <li>
+            There is suspected abuse or rule evasion.
+          </li>
+
+          <li>
+            Required Discord roles or permissions cannot be
+            assigned.
+          </li>
+
+          <li>
+            The user is banned, restricted, or otherwise
+            ineligible under server rules.
+          </li>
+        </ul>
+
+        <p>
+          Verification does not guarantee permanent membership,
+          access to sessions, staff approval, or immunity from
+          moderation.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>9. Privacy and Data</h2>
+
+        <p>
+          Information collected and processed through the
+          service is handled according to our Privacy Policy.
+          Our Privacy Policy explains what information is
+          collected, why it is used, how it may be stored, and
+          how a user may request removal.
+        </p>
+
+        <p>
+          Review the Privacy Policy before completing
+          verification:
+          <a
+            class="text-link"
+            href="privacy.html"
+          >
+            San Francisco Roleplay Privacy Policy
+          </a>.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>10. Third-Party Platforms</h2>
+
+        <p>
+          The verification service depends on third-party
+          platforms and services, including Roblox, Discord,
+          GitHub Pages, Railway, and related infrastructure.
+        </p>
+
+        <p>
+          Your use of Roblox and Discord remains subject to their
+          own rules, policies, availability, and account
+          requirements. San Francisco Roleplay does not control
+          those third-party platforms and cannot guarantee that
+          their services will always remain available or
+          unchanged.
+        </p>
+
+        <p>
+          You should also review:
+        </p>
+
+        <ul>
+          <li>
+            <a
+              class="text-link"
+              href="https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Roblox Terms of Use
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="text-link"
+              href="https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Roblox Community Standards
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="text-link"
+              href="https://discord.com/terms"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Discord Terms of Service
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="text-link"
+              href="https://discord.com/guidelines"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Discord Community Guidelines
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>11. Availability and Changes to the Service</h2>
+
+        <p>
+          We may update, suspend, restrict, or discontinue part
+          or all of the verification service when necessary for
+          maintenance, security, legal compliance, platform
+          changes, server operations, or abuse prevention.
+        </p>
+
+        <p>
+          We do not guarantee uninterrupted access or that every
+          error will be corrected immediately.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>12. Suspension and Termination</h2>
+
+        <p>
+          Access to the service or San Francisco Roleplay may be
+          suspended or terminated if you violate these terms,
+          server rules, platform rules, or applicable law, or if
+          your activity may threaten users, accounts, systems, or
+          the community.
+        </p>
+
+        <p>
+          Where appropriate, you may contact the management team
+          to request a review of a verification decision.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>13. Disclaimer of Warranties</h2>
+
+        <p>
+          To the maximum extent permitted by applicable law, the
+          verification service is provided on an
+          <strong>"as is"</strong> and
+          <strong>"as available"</strong> basis.
+        </p>
+
+        <p>
+          We do not guarantee that the service will always be
+          available, error-free, compatible with every device,
+          or free from interruption caused by Roblox, Discord,
+          hosting providers, internet services, or other
+          third-party systems.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>14. Limitation of Liability</h2>
+
+        <p>
+          To the maximum extent permitted by applicable law, San
+          Francisco Roleplay and its owners, developers, staff
+          members, and representatives will not be responsible
+          for indirect, incidental, special, or consequential
+          loss arising from the use or inability to use the
+          verification service.
+        </p>
+
+        <p>
+          Nothing in these terms excludes or limits liability
+          that cannot legally be excluded or limited.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>15. Changes to These Terms</h2>
+
+        <p>
+          These terms may be updated when the verification
+          service, Roblox requirements, Discord requirements,
+          server operations, or applicable laws change.
+        </p>
+
+        <p>
+          The effective date shown at the top of this page will
+          be updated when material changes are published.
+          Continued use of the service after an update means you
+          accept the revised terms.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>16. Contact and Support</h2>
+
+        <p>
+          For questions about these terms, verification problems,
+          account-linking requests, or data-removal requests,
+          contact the
+          <strong>San Francisco Roleplay Ownership Team</strong>
+          by opening a
+          <strong>Management Ticket</strong>
+          in the official San Francisco Roleplay Discord server.
+        </p>
+
+        <p>
+          Include your Discord user ID and Roblox username when
+          requesting help, but never include your password,
+          cookies, backup codes, or two-factor authentication
+          codes.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>17. Entire Agreement</h2>
+
+        <p>
+          These Terms of Service, together with the Privacy
+          Policy and applicable San Francisco Roleplay server
+          rules, form the agreement governing your use of the
+          verification service.
+        </p>
+      </section>
+
+      <div class="divider"></div>
+
+      <nav
+        class="navigation"
+        aria-label="Website navigation"
+      >
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="privacy.html">
+          Privacy Policy
+        </a>
+
+        <a href="terms.html">
+          Terms of Service
+        </a>
+
+        <button
+          class="verify"
+          type="button"
+          onclick="returnToVerification()"
+        >
+          Verification
+        </button>
+      </nav>
+
+      <footer class="footer">
+        © 2026 San Francisco Roleplay. All rights reserved.
+        <br>
+        Roblox and the Roblox logo are trademarks of Roblox
+        Corporation. San Francisco Roleplay is not affiliated
+        with or endorsed by Roblox Corporation.
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    function returnToVerification() {
+      const railwayDomain =
+        "sfrpbot-production.up.railway.app";
+
+      if (
+        document.referrer &&
+        document.referrer.includes(railwayDomain) &&
+        window.history.length > 1
+      ) {
+        window.history.back();
+        return;
+      }
+
+      window.location.href =
+        "https://sfrpbot-production.up.railway.app/verify";
+    }
+  </script>
 </body>
 </html>
